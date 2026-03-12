@@ -9,8 +9,7 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 client = Groq(api_key=GROQ_API_KEY)
 
-SHEET_URL = "https://docs.google.com/spreadsheets/d/1Vd6DaCvOlnZ_omVG_xGSj6kUT5OUpt3JGE7jDBXEAsQ/edit?usp=sharing
-@app.get("/games")"
+SHEET_URL = SHEET_URL = "https://docs.google.com/spreadsheets/d/1Vd6DaCvOlnZ_omVG_xGSj6kUT5OUpt3JGE7jDBXEAsQ/export?format=csv"
 def get_games():
     response = requests.get(SHEET_URL)
     return response.text
